@@ -1,0 +1,21 @@
+.headerbar-container {
+  width: 100%;
+  padding: 0;
+  background-color: #00b3c4;
+
+  .title {
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: normal;
+  }
+
+  .icon-arrow-back {
+    position: absolute;
+    top: .12rem;
+    left: .12rem;
+    width: .28rem;
+    height: .26rem;
+    background: url('/static/images/arrow_back_white.png') no-repeat center/cover;
+  }
+}

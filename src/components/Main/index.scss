@@ -1,0 +1,6 @@
+.main-container {
+  $headerHeight: 45px;
+  width: 100%;
+  height: calc(100% - #{$headerHeight});
+  background: url("/static/images/home_bg.png") no-repeat top center/cover;
+}

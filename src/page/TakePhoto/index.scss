@@ -1,0 +1,57 @@
+@mixin box-size($w:100%, $y:100%) {
+  width: $w;
+  height: $y;
+}
+
+.takephoto-wrapper {
+  position: relative;
+  @include box-size();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //   padding-bottom: .44rem;
+
+  .takephoto-view-wrapper {
+    display: flex;
+    // height: calc(100% - .44rem);
+    @include box-size();
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    video,
+    canvas {
+      // @include box-size(375px, 375px);
+      @include box-size(100%, 375px);
+      // min-width: 375px;
+    }
+  }
+
+  .takephoto-btn-wrapper {
+    position: absolute;
+    bottom: .44rem;
+    display: flex;
+    @include box-size(100%, .44rem);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .takephoto-btn {
+      width: (3270%/72);
+      border: 1px solid #00b3c4;
+      line-height: 2;
+
+      .btn {
+        padding: 2px;
+        color: #1fc8ea;
+        background: #238293;
+        box-shadow: 0px 0px 5px 2px #00b3c4;
+        border: 1px solid #00b3c4;
+        border-radius: 2px;
+        padding: .06rem 0;
+        font-size: .14rem;
+      }
+
+    }
+  }
+}

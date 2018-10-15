@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+@mixin full-wrapper() {
+  height: 100%;
+  width: 100%;
+}
+
+html,
+body {
+  @include full-wrapper;
+}
+
+#app {
+  @include full-wrapper;
+  // font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: #00b3c4;
+}
+
+.icon-arrow-back {
+  position: absolute;
+  top: .1rem;
+  left: .1rem;
+  width: .28rem;
+  height: .26rem;
+  background: url('/static/images/arrow_back_white.png') no-repeat center/cover;
+}
