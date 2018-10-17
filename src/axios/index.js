@@ -44,6 +44,7 @@ function $axios(options) {
         },
         error => {
           // alert(error);
+          console.log(error);
           return Promise.reject(error);
         }
       )

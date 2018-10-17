@@ -233,12 +233,16 @@ export default {
         }
         _this.loading = false;
       } catch (error) {
-        console.log(error);
         _this.loading = false;
-        // 出现异常 移除可能登记好的人员
+        console.log(error)
+        // 服务端宕机问题
+        if(error.message.includes("timeout")){
+          alert("请求超时，请稍后尝试");
+          return;
+        }
+        // 出现异常错误 移除可能登记好的人员
         await _this.removeHuman(_this.phonenumber);
         alert("系统错误:" + error);
-        //  _this.$toast.error("系统错误:" + error);
       }
     },
     // base64ToArrayBuffer(base64) {

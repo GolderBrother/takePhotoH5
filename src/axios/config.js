@@ -14,7 +14,7 @@ export default {
     // 参数
     data:{},
     // 设置超时时间  ms
-    timeout: 100000,
+    timeout: 10000,
     // 携带凭证 允许携带cookie 后端需要配合 allow credentials
     withCredentials: false,
     // 返回数据类型
